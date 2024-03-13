@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    overflow: hidden;
+
+}
+
+.containers{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f3f5f8;
+}
+
+nav{
+    position: fixed;
+    padding-left: 110px;
+    padding-right: 30px;
+    line-height: 50px;
+}
+
+.logo{
+    display: flex;
+    font-size: 20px;
+    font-weight: 800;
+    color: #3d535f;
+    letter-spacing:3px;
+    cursor: pointer;
+    text-transform:uppercase ;
+}
+b{
+    font-size: 30px;
+    color:#7f00ff;
+
+}
+.navItems{
+    display: flex;
+}
+.navItems li{
+    list-style: none;
+    margin: 0 15px;
+}
+.navItems li a{
+    font-size: 14px;
+    color: #3d535f;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navItems li:hover a,
+.links a :hover{
+    color: #7f00ff;
+}
+
+.links a{
+    font-size: 16px;
+    color: #3d535f;
+    margin: 25px 10px;
+}
+
+/* 
+THE GRADIENT BALLS */
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: calc(100vh -10px);
+    justify-content: center;
+    align-items: center;
+    padding: 0 8%;
+    /* overflow: hidden; */
+}
+.wrapper::before{
+    position:absolute;
+    content: '';
+    height: 600px;
+    width: 600px;
+    border-radius:50%;
+    left: -12%;
+    top: 40%;
+    background: linear-gradient(45deg, #7f00ff, pink);
+    animation: object1 6s linear infinite;
+}
+
+.wrapper::after{
+    position:absolute;
+    content: '';
+    height: 100px;
+    width: 100px;
+    border-radius:50%;
+    left: 35%;
+    top: 12%;
+    background: linear-gradient(45deg, #7f00ff, pink);
+   
+}
+@keyframes object1{
+    50%{
+        left: -13%;
+        top:41%;
+    }
+}
+
+
+/* MULTITEXT SECTION */
+.cols0{
+    width: auto;
+    z-index: 5;
+
+}
+.topline{
+    display: block;
+    position: relative;
+    letter-spacing: 5px;
+    color:#3d535f;
+    
+}
+.topline::after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 30px;
+    bottom: 10px;
+    background-color:#7f00ff ;
+}
+
+h1{
+    display: block;
+    font-size: 48px;
+    font-weight: 900;
+    color: #3d535f;
+
+}
+.multitext{
+    color: #7f00ff;
+    text-transform: capitalize;
+    
+}
+p{
+    display: block;
+    width: 100%;
+    font-size:14px;
+    color: #3d535f;
+    line-height: 30px;
+    
+}
+.btns{
+    width: 100%;
+    /* position: relative; */
+    left: 50px;
+}
+.primarybtn{
+    width: 180px;
+    outline: none;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+   
+   
+    color: #ffffff;
+    background-color: #7f00ff;
+    padding: 16px 12px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+.primarybtn:hover{
+    background-color: #3d535f;
+}
+.secondarybtn{
+    width: 180px;
+    outline: 0.4px;
+    border: 0.5px;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    background-color:none;
+   
+   
+    color: #3d535f;
+   
+    padding: 16px 12px;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+
+}
+.secondarybtn:hover{
+    background-color:#3d535f;
+    color: #ffffff;
+}
+
+.imgbox{
+    position: relative;
+    width: 100%;
+    height: calc(100% -80px);
+    right: 0px;
+    top: 100px;
+}
+
+.imgbox img{
+    position: relative;
+    height: 110%;
+    width: 700px;
+   
+    right:-100px;
+   
+}
+
+
+
+ /* TABLET SCREENS */
+@media (max-width: 1024px) {
+    nav{
+        padding-left: 30px;
+        padding-right: 30px;
+        line-height: 50px;
+    }
+    /* MULTITEXT SECTION */
+.cols0{
+    margin-top: 48px;
+    width: auto;
+    z-index: 5;
+
+}
+
+h1{
+    display: block;
+    font-size: 40px;
+    font-weight: 900;
+    color: #3d535f;
+
+}
+
+/* THE GRADIENT BALLS */
+.wrapper::before{
+    height: 500px;
+    width: 500px;
+    left: -12%;
+    top: 50%;
+    animation: object1 6s linear infinite;
+}
+.wrapper::after{
+    height: 70px;
+    width: 70px;
+    left: 70%;
+}
+@keyframes object1{
+    50%{
+        left: -13%;
+        top:46%;
+    }
+}
+
+.imgbox{
+    display: none; /* Hide the image */
+  }
+    
+}
+
+@media (max-width: 480px) {
+    /* MULTITEXT SECTION */
+    nav{
+        padding-left: 0px;
+        padding-right: 0px;
+        line-height: 50px;
+    }
+.cols0{
+    margin-top: 48px;
+    width: auto;
+    z-index: 5;
+
+}
+
+h1{
+    display: block;
+    font-size: 30px;
+    font-weight: 900;
+    color: #3d535f;
+
+}
+.topline{
+    font-size: 14px;
+    
+}
+.topline::after{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 16px;
+    bottom: 5px;
+    background-color:#7f00ff ;
+}
+.primarybtn{
+    margin: 16px 5px;
+}
+.secondarybtn{
+    margin: 16px 5px;
+}
+
+
+}

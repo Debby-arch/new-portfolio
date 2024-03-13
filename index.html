@@ -1,0 +1,118 @@
+<!-- This is a portfolio page i have done to better my styling skills.
+     The main highlights are the typing effect and gradients.First coding sunday btw after a pretty long time
+ -->
+ 
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+ </head>
+ <body>
+    <div class="containers container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <div class="navbar-brand logo">Ojuok <b>.</b></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class=" navbar-nav me-auto mb-2 mb-lg-0 navItems">
+                    <li class="nav-item"><a href="design.html">My Designs</a></li>
+                    <li class="nav-item"><a href="https://github.com/Debby-arch/flutter_application">Current Project</a></li>
+                    <li class="nav-item"><a href="https://github.com/Debby-arch?tab=repositories">Projects</a></li>
+                    <li class="nav-item"><a href="https://dev.to/debbyarch">Blog</a></li>
+                </ul>
+                <div class=" nav-item links">
+                    <a href="https://www.linkedin.com/in/rosedebrahopiyo/"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://codepen.io/Debby-arch"><i class='bx bxl-codepen'></i></a>
+                    <a href="https://github.com/Debby-arch"><i class='bx bxl-github'></i></a>
+                </div>
+        </div>
+
+            </div>
+        </nav>
+        <!-- MULTITEXT SECTION -->
+
+        <div class="wrapper">
+            <div class="cols cols0">
+                <h4 class="topline">Hello</h4>
+                <h1>I'm <span class="multitext"></span></h1>
+                <p> Hi there!
+
+                    I'm Rosedebra Ojuok, a motivated Computer Science student with a passion for crafting visually appealing and user-centered software experiences. Proficient in Python, JavaScript, Dart, C, and C++, with foundational knowledge of UI/UX design principles. Skilled in design tools like Adobe XD, Figma, and Canva.  Eager to learn, currently exploring Firebase and PostgreSQL to expand my database knowledge. Ready to contribute my programming and design skills to a collaborative team environment and build innovative solutions.  </p>
+                <div class="btns">
+                    <button class="primarybtn" onclick="showContactInfo()">Hire Me</button>
+                    <script>
+                        function showContactInfo() {
+                            // Create a div element for the popup
+                            var popup = document.createElement("div");
+                            popup.style.position = "fixed";
+                            popup.style.top = "50%";
+                            popup.style.left = "50%";
+                            popup.style.transform = "translate(-50%, -50%)";
+                            popup.style.padding = "20px";
+                            popup.style.backgroundColor = "purple";
+                            popup.style.border = "1px solid #ccc";
+                            popup.style.borderRadius = "10px";
+                            popup.style.zIndex = "9999";
+                        
+                            // Create the email address element
+                            var email = document.createElement("p");
+                            email.textContent = "Email: opiyorosedebrah@gmail.com";
+                            email.style.color = "white";
+                        
+                            // Create the phone number element
+                            var phone = document.createElement("p");
+                            phone.textContent = "Phone: +254111550163";
+                            phone.style.color = "white";
+                        
+                            // Append email and phone elements to the popup
+                            popup.appendChild(email);
+                            popup.appendChild(phone);
+                        
+                            // Append the popup to the body
+                            document.body.appendChild(popup);
+                        
+                            // Close the popup when clicked outside of it
+                            window.onclick = function(event) {
+                                if (event.target == popup) {
+                                    popup.style.display = "none";
+                                }
+                            }
+                        }
+                    </script>
+                    <a href="https://drive.google.com/file/d/1owrUPd-GCqld1eJNh4WjF8dv9dyX9Zid/view?usp=drive_link" download>
+                     <button class= "secondarybtn">Download CV</button> 
+                     </a>
+                </div>
+            </div>
+            <div class="cols cols1"></div>
+            <div class="imgbox">
+                <img src="cuter.png" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MULTITEXT JS CODE -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typingEffect = new Typed(".multitext", {
+            strings:["App Dev", "UI/UX Designer","Project Manager"],
+            loop:true,
+            typeSpeed:100,
+            backSpeed: 80,
+            backDelay:1500
+        })
+    </script>
+
+    
+ </body>
+ </html>
